@@ -5,9 +5,9 @@
           <img class="logo" src="~public/logo-48.png" alt="logo">
         </router-link>
         <router-link to="/">首页</router-link>
-        <router-link class="right add" to="/add">写文章</router-link>
-        <router-link v-if="!user || !user._id" class="right" to="/register">注册</router-link>
-        <router-link v-if="!user || !user._id" class="right" to="/login">登录</router-link>
+        <!-- <router-link class="right add" to="/add">写文章</router-link> -->
+        <!-- <router-link v-if="!user || !user._id" class="right" to="/register">注册</router-link> -->
+        <!-- <router-link v-if="!user || !user._id" class="right" to="/login">登录</router-link> -->
       </nav>
     </header>
 </template>
