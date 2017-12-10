@@ -6,10 +6,10 @@
           <img v-else src="http://upload.jianshu.io/users/upload_avatars/8701720/d2881dc0-39fc-4f8b-812d-7081974215dd.png?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" alt="">
         </span>
         <span class="username">
-          {{item.user && item.user.nickname ? item.user.nickname : "设计杂货店"}}
+          {{item.user && item.user.nickname ? item.user.nickname : "小前端"}}
         </span>
         <span class="publishTime">
-          12小时前
+          {{item.created.split(' ')[0]}}
         </span>
       </div>
       <div class="title">
