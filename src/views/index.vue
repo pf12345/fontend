@@ -13,7 +13,7 @@
 </template>
 
 <script>
-	import item from './../components/item.vue'
+	import item from './../components/Item.vue'
 	export default {
 		data() {
 			return {
