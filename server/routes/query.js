@@ -115,6 +115,7 @@ router.post('/register', function(req, res) {
 		})
 	})
 	.catch(ex => {
+		console.log(ex);
 		if (ex.code && ex.message) {
 			res.send(`{"result":"FALSE","msg":${ex.message}}`);
 		} else {
