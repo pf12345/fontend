@@ -38,7 +38,10 @@ router.post('/addArticle', function(req, res) {
 		comments: 0,
 		modified: now,
 		see: 0,
-		user: req.body.user || {}
+		user: req.body.user || {
+			nickname: "官方",
+			avatar: '/public/images/avatar.png'
+		}
 	}
 	
 	var article = new Articles.schema(info)
