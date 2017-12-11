@@ -38,8 +38,6 @@ router.onReady(() => {
   // the data that we already have. Using router.beforeResolve() so that all
   // async components are resolved.
   router.beforeResolve((to, from, next) => {
-    console.log(to, from)
-    console.log(store)
     try {
       if(to.path == '/add' && !store.state.user._id) {
         router.replace('/login');
