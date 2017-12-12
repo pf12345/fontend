@@ -14,6 +14,8 @@ var RedisStore = require('connect-redis')(session);
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var config = require('./config/config.json')['fontEnd'];
+
 const isProd = process.env.NODE_ENV === 'production'
 const useMicroCache = process.env.MICRO_CACHE !== 'false'
 const serverInfo =
@@ -156,7 +158,7 @@ app.get('*', isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))
 })
 
-const port = process.env.PORT || 80
+const port = process.env.PORT || config.port || 8030;
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
 })

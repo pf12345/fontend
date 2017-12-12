@@ -8,6 +8,8 @@
 	  		</ul>
 		</div>
 		<a v-if="items.length == page * limit" data-page="3" href="/" class="load-more">阅读更多</a>
+
+    {{test}}
 	</div>
 
 </template>
@@ -17,21 +19,28 @@
 	export default {
 		data() {
 			return {
-				items: this.$store.getters.activeArticleList,
-        page: 1,
-        limit: 30
+				items: this.$store.getters.activeArticleList
 			}
 		},
 		components: {
 			item,
 		},
-    created() {
-		  this.$store.dispatch('FETCH_ARTICLE_LIST', {
-        page: this.page,
-        limit: this.limit
-      }).then(() => {
-        this.items = this.$store.getters.activeArticleList;
+    asyncData ({ store, route: { params: { id }}}) {
+      return store.dispatch('FETCH_ARTICLE_LIST', {
+        page: store.state.page,
+        limit: store.state.limit
       });
+    },
+    computed: {
+      items() {
+        return this.$store.getters.activeArticleList;
+      }
+    },
+    beforeMount() {
+      
+    },
+    created() {
+      
     },
     mounted() {
       	

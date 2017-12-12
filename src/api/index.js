@@ -1,8 +1,9 @@
 // this is e in webpack config based on server/client build
 import axios from 'axios';
+const config = require('./../../config/config.json')['fontEnd'];
 
 const logRequests = !!process.env.DEBUG_API
-const domain = 'http://localhost:8010'
+const domain = config.domain;
 
 //method: post or get
 function fetch(method, url, data) {
@@ -18,7 +19,7 @@ export function fetchAddArticle (data) {
 }
 
 export function fetchArticleList (data) {
-	return fetch('post', '/query/articleList', data);
+	return fetch('post', `${domain}/query/articleList`, data);
 }
 
 export function fetchRegister (user) {
@@ -34,5 +35,5 @@ export function fetchCurrentUser() {
 }
 
 export function fetchOneArticle(_id) {
-  return fetch('post', `/query/singleArticle`, {_id: _id});
+  return fetch('post', `${domain}/query/singleArticle`, {_id: _id});
 }

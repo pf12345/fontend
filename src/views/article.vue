@@ -22,10 +22,10 @@
 <script>
 	export default {
 		created() {
-			this.$store.dispatch('FETCH_ONE_ARTICLE', this.$store.state.article_id);
+			
 		},
 		asyncData ({ store, route: { params: { id }}}) {
-		    return store.commit('SET_ARTICLE_ID', id)
+			return store.dispatch('FETCH_ONE_ARTICLE', id);
 		  },
 		computed: {
 			article () {

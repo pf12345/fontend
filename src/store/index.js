@@ -13,7 +13,8 @@ export function createStore () {
       articleList: [],
       user: {},
       article: null,
-      article_id: ''
+      page: 1,
+      limit: 30
     },
     actions,
     mutations,
