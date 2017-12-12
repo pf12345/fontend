@@ -2,14 +2,14 @@
   "publicPath": "/dist/",
   "all": [
     "vendor.2310dc351edb8cb38ca5.js",
-    "app.e224091a0bdc1904e3a4.js",
-    "manifest.656f51530e1eaa09033e.js",
-    "common.e224091a0bdc1904e3a4.css"
+    "app.9e804ba8a73c15238f42.js",
+    "manifest.5cd5cb83cd5d6bbfbe90.js",
+    "common.9e804ba8a73c15238f42.css"
   ],
   "initial": [
-    "manifest.656f51530e1eaa09033e.js",
+    "manifest.5cd5cb83cd5d6bbfbe90.js",
     "vendor.2310dc351edb8cb38ca5.js",
-    "app.e224091a0bdc1904e3a4.js"
+    "app.9e804ba8a73c15238f42.js"
   ],
   "async": [],
   "modules": {
