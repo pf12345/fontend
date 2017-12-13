@@ -15,7 +15,7 @@ function fetch(method, url, data) {
 }
 
 export function fetchAddArticle (data) {
-  return fetch('post', `/query/addArticle`, data);
+  return fetch('post', `${domain}/query/addArticle`, data);
 }
 
 export function fetchArticleList (data) {
@@ -23,15 +23,15 @@ export function fetchArticleList (data) {
 }
 
 export function fetchRegister (user) {
-	return fetch('post', '/query/register', user);
+	return fetch('post', `${domain}/query/register`, user);
 }
 
 export function fetchLogin (user) {
-	return fetch('post', '/query/login', user);
+	return fetch('post', `${domain}/query/login`, user);
 }
 
 export function fetchCurrentUser() {
-	return fetch('post', '/query/currentUser');
+	return fetch('post', `${domain}/query/currentUser`);
 }
 
 export function fetchOneArticle(_id) {
