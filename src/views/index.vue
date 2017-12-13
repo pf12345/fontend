@@ -40,10 +40,14 @@
       }
     },
     created() {
+      // this.$store.dispatch('FETCH_ARTICLE_LIST', {
+      //   page: this.$store.state.page,
+      //   limit: this.$store.state.limit
+      // });
       // console.log(window);
     },
     mounted() {
-      	
+      	// console.log(window);
     },
     methods: {
       
